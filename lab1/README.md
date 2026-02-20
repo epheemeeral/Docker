@@ -17,10 +17,13 @@ S3 Хранилище (Data Lake). Запустить контейнер ком�
 
 1. Установка и запуск minio
 <img width="564" height="310" alt="image" src="https://github.com/user-attachments/assets/52fc05c8-2ea8-497b-866e-840bbe85763f" />
+
 <img width="1432" height="853" alt="image" src="https://github.com/user-attachments/assets/2035228b-d60a-40a0-9f9c-0b8416e54523" />
+
 
 2. Создание бакета
 <img width="744" height="219" alt="image" src="https://github.com/user-attachments/assets/6cd34851-81ab-47e1-9754-b1e000674941" />
+
 <img width="1440" height="778" alt="image" src="https://github.com/user-attachments/assets/f0d79067-2488-48e5-8c85-4617fbd43f36" />
 
 
