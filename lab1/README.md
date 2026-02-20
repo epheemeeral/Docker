@@ -26,5 +26,10 @@ S3 Хранилище (Data Lake). Запустить контейнер ком�
 
 <img width="1440" height="778" alt="image" src="https://github.com/user-attachments/assets/f0d79067-2488-48e5-8c85-4617fbd43f36" />
 
+3. Остановка и повторный запуск контейнера (+ проверка)
+
+<img width="1159" height="142" alt="image" src="https://github.com/user-attachments/assets/b964d77c-53b6-436b-bf47-b0bf2843a5fc" />
+
+
 
 
