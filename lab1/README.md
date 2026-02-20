@@ -30,6 +30,24 @@ S3 Хранилище (Data Lake). Запустить контейнер ком�
 
 <img width="1159" height="142" alt="image" src="https://github.com/user-attachments/assets/b964d77c-53b6-436b-bf47-b0bf2843a5fc" />
 
+### Перечень использованных команд:
+1) docker --version
+2) docker run hello-world
+3) docker images
+4) docker ps
+5) docker ps -a
+6) docker run -d \
+  --name minio-server \
+  -p 9000:9000 \
+  -p 9001:9001 \
+  -e "MINIO_ROOT_USER=admin" \
+  -e "MINIO_ROOT_PASSWORD=password123" \
+  minio/minio server /data --console-address ":9001"
+7) docker stop minio-server
+8) docker start minio-server
+
+  ## Вывод
+
 
 
 
