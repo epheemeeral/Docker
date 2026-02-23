@@ -41,21 +41,27 @@ Jupyter Notebook - Собрать образ с предустановленны
 ### Этап 3. Сборка и проверка
 
 Сборка образа:
+
 <img width="1438" height="270" alt="image" src="https://github.com/user-attachments/assets/745be69d-e043-4de8-8dcf-453fedf936c3" />
 
 Запуск контейнера:
+
 <img width="699" height="47" alt="image" src="https://github.com/user-attachments/assets/a14403c9-8a50-49db-923d-f3dcc965da61" />
 
 Проверка:
+
 <img width="489" height="95" alt="image" src="https://github.com/user-attachments/assets/6fde12ed-6be5-42ec-838d-4be406ce74d9" />
 
 Переходим по адресу http://localhost:8888:
+
 <img width="1435" height="857" alt="image" src="https://github.com/user-attachments/assets/14ee3463-c6b1-4b93-8801-e6c1cfd31164" />
 
 Запускаем скрипт main.py через терминал:
+
 <img width="1440" height="233" alt="image" src="https://github.com/user-attachments/assets/23b6fdba-de59-4224-af22-ee9e58923e75" />
 
 Получили график, на котором видно, что позитивные посты собирают больше лайков и репостов:
+
 <img width="1440" height="656" alt="image" src="https://github.com/user-attachments/assets/5c777025-54e7-40b3-af7c-bb8e78abdd57" />
 
 
