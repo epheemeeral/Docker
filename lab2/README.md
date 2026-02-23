@@ -31,7 +31,30 @@ Jupyter Notebook - Собрать образ с предустановленны
 <img width="492" height="31" alt="image" src="https://github.com/user-attachments/assets/8406bac5-d766-4f0f-8c68-9ed23b29e680" />
 
 Файл main.py. Генерирует синтетический набор данных по активности в социальных сетях и рассчитывает метрику вовлеченности (likes + reposts) с помощью библиотеки Pandas. Используя Seaborn, строит и сохраняет график зависимости вовлеченности от тональности текста
+```
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+import random
 
+# Генерация данных по теме Social Media
+data = {
+    'post_id': range(1, 101),
+    'likes': [random.randint(0, 1000) for _ in range(100)],
+    'reposts': [random.randint(0, 200) for _ in range(100)],
+    'text_length': [random.randint(10, 500) for _ in range(100)],
+    'sentiment': [random.choice(['positive', 'negative']) for _ in range(100)]
+}
+df = pd.DataFrame(data)
+df['engagement'] = df['likes'] + df['reposts']
+
+# Визуализация
+plt.figure(figsize=(10, 6))
+sns.barplot(x='sentiment', y='engagement', data=df, palette='viridis')
+plt.title('Engagement Analysis (Variant 17)')
+plt.savefig('/app/result.png')
+print("Анализ выполнен, график сохранен как result.png")
+```
 <img width="554" height="317" alt="image" src="https://github.com/user-attachments/assets/e1ce1b4b-30d1-4b2a-b3e7-a8b909506673" />
 
 <img width="551" height="355" alt="image" src="https://github.com/user-attachments/assets/1bf68a45-2001-4152-b79d-c484d29eb9c1" />
