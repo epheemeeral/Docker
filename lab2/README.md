@@ -125,6 +125,16 @@ CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-r
 
 <img width="1440" height="656" alt="image" src="https://github.com/user-attachments/assets/5c777025-54e7-40b3-af7c-bb8e78abdd57" />
 
+## Команды для запуска 
+cd ~/Desktop/lab_02.1
+docker start my_social_lab
+переход на http://localhost:8888
+python main.py
+
+
+## Выводы 
+В ходе работы были освоены навыки контейнеризации аналитического стека Python, что позволило развернуть изолированную среду Jupyter Lab с предустановленными библиотеками Pandas и Seaborn. Использование Docker обеспечило полную воспроизводимость процесса анализа данных социальных сетей и автоматизацию запуска веб-интерфейса. 
+
 
 
 
