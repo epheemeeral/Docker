@@ -18,6 +18,10 @@ S3 Хранилище (Data Lake). Запустить контейнер ком�
 1. Установка и запуск minio
 <img width="564" height="310" alt="image" src="https://github.com/user-attachments/assets/52fc05c8-2ea8-497b-866e-840bbe85763f" />
 
+Переходим на http://localhost:9001/login
+логин: admin
+пароль: password123
+
 <img width="1432" height="853" alt="image" src="https://github.com/user-attachments/assets/2035228b-d60a-40a0-9f9c-0b8416e54523" />
 
 
