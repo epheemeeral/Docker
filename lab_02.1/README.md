@@ -52,10 +52,15 @@ Jupyter Notebook - Собрать образ с предустановленны
 
 
 ## Для запуска
+
 docker compose build
+
 docker compose up -d
+
 docker compose ps
+
 http://localhost:9000/
+
 http://localhost:8501/
 
 
