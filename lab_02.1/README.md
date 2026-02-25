@@ -26,6 +26,16 @@ Jupyter Notebook - Собрать образ с предустановленны
 
 <img width="254" height="284" alt="image" src="https://github.com/user-attachments/assets/2a00020b-e5a8-41a6-bbff-855b5d257e37" />
 
+Проект развернут в Docker и состоит из следующих сервисов:
+
+* **social_db**: База данных PostgreSQL для хранения метрик.
+* **social_loader**: Python-скрипт для первоначальной загрузки данных в БД.
+* **social_analysis**: Среда Jupyter Lab для интерактивного анализа данных.
+* **social_dashboard**: Дашборд на Streamlit для визуализации аналитики.
+
+<img width="1261" height="711" alt="image" src="https://github.com/user-attachments/assets/b3f28dff-15af-467a-a02c-3bc260bd10a4" />
+
+
 Сборка образа, запуск и проверка:
 
 Сборка:
