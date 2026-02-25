@@ -1,0 +1,71 @@
+services:
+  # 1. База данных для хранения данных соцсетей
+  db:
+    image: postgres:16-alpine
+    container_name: social_db
+    environment:
+      POSTGRES_DB: social_analytics
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password123
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    networks:
+      - analytics-net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin -d social_analytics"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # 2. Загрузчик (запускается после БД, загружает CSV и выключается)
+  loader:
+    build: ./app
+    container_name: social_loader
+    volumes:
+      - ./data:/data:ro
+    environment:
+      DB_URL: postgresql://admin:password123@db:5432/social_analytics
+    networks:
+      - analytics-net
+    depends_on:
+      db:
+        condition: service_healthy
+    entrypoint: ["python", "loader.py"]
+
+  # 3. Основная среда анализа (Jupyter Lab)
+  analysis:
+    build: ./app
+    container_name: social_analysis
+    ports:
+      - "9000:8888"
+    environment:
+      DB_URL: postgresql://admin:password123@db:5432/social_analytics
+    networks:
+      - analytics-net
+    depends_on:
+      loader:
+        condition: service_completed_successfully
+
+  dashboard:
+    build: ./app
+    container_name: social_dashboard
+    ports:
+      - "8501:8501"  # Стандартный порт Streamlit
+    environment:
+      - DB_HOST=db
+      - POSTGRES_DB=social_analytics
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=password123
+    command: ["streamlit", "run", "dashboard.py", "--server.address=0.0.0.0"]
+    networks:
+      - analytics-net
+    depends_on:
+      db:
+        condition: service_healthy
+
+networks:
+  analytics-net:
+    driver: bridge
+
+volumes:
+  pg_data:
