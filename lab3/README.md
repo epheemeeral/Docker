@@ -49,7 +49,6 @@
 
 <img width="554" height="104" alt="image" src="https://github.com/user-attachments/assets/d4deecb0-1e0b-464f-a854-a0a7ca92dd6f" />
 
-<img width="841" height="383" alt="image" src="https://github.com/user-attachments/assets/66f57c34-f09a-401f-b1bb-fa4b4a1278a9" />
 
 Переходим на http://localhost:30017
 
