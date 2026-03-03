@@ -129,7 +129,7 @@ CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-r
 
 cd ~/Desktop/lab_02.1
 
-docker start my_social_lab
+docker start lab_02.1
 
 переход на http://localhost:8888
 
