@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: report-html
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Аналитический отчет</title>
+        <style>
+            body { font-family: sans-serif; margin: 40px; line-height: 1.6; color: #333; }
+            .status { color: #28a745; font-weight: bold; }
+        </style>
+    </head>
+    <body>
+        <h1>📊 Отчет по лабораторной работе 3.1</h1>
+        <p><b>Вариант:</b> 17 (Nginx + Custom Static HTML)</p>
+        <p><b>Студент:</b> София</p>
+        <hr>
+        <p>Данная страница развернута внутри кластера Kubernetes с использованием объекта <b>ConfigMap</b>.</p>
+        <p>Текущий статус деплоя: <span class="status">Running</span></p>
+    </body>
+    </html>
