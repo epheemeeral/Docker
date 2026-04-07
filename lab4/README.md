@@ -49,6 +49,8 @@ docker build --platform linux/arm64 -t shift-backend:latest .
 # Frontend
 cd src/frontend
 docker build --platform linux/arm64 -t shift-frontend:latest .
+```
 
-## Вывод
+
+Вывод
 В ходе выполнения лабораторной работы было успешно разработано и развернуто полнофункциональное трехзвенное приложение «Shift Schedule Management System» для управления графиком смен сотрудников.
